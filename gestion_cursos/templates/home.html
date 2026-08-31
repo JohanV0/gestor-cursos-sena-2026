@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestor de Cursos · Bienvenida</title>
+  <!-- Tailwind CSS v3 (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- (Opcional) Font Awesome para un toque sutil, sin clases personalizadas -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'dark-purple': {
+              950: '#0b0614', // Fondo general ultra oscuro
+              900: '#140c24', // Fondo de la tarjeta principal
+              800: '#23153c', // Bordes e interacciones
+              700: '#3a2063',
+              500: '#8b5cf6', // Acento neón
+              300: '#c4b5fd', // Texto secundario
+              100: '#ede9fe', // Texto claro
+            },
+          },
+          fontFamily: {
+            'jp-serif': ['Noto Serif JP', 'serif'],
+            'sans-refined': ['Plus Jakarta Sans', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap');
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-dark-purple-950 text-dark-purple-100 p-4 antialiased">
+
+  <!-- Tarjeta principal: solo bienvenida, diseño moderno -->
+  <div class="max-w-2xl w-full bg-dark-purple-900/80 backdrop-blur-sm shadow-2xl shadow-dark-purple-950/50 rounded-3xl p-8 md:p-12 text-center border border-dark-purple-800 transition-all hover:shadow-dark-purple-500/10 duration-300">
+
+    <!-- Icono decorativo -->
+    <div class="flex justify-center mb-6">
+      <div class="w-20 h-20 bg-dark-purple-800/60 rounded-full flex items-center justify-center shadow-inner border border-dark-purple-700">
+        <img src="{% static 'img/logo.png' %}" alt="logo" class="w-20 h-20 rounded-full">
+      </div>
+    </div>
+
+    <span class="text-xs tracking-widest uppercase text-dark-purple-300 font-medium block mb-2">
+      講座管理 — Course Management
+    </span>
+
+    <!-- Título principal -->
+    <h1 class="text-4xl md:text-5xl font-jp-serif font-light tracking-wide text-white">
+      Gestor de Cursos
+    </h1>
+
+    <!-- Línea divisoria sutil -->
+    <div class="w-24 h-1 bg-dark-purple-500 mx-auto my-5 rounded-full"></div>
+
+    <!-- Mensaje de bienvenida cálido y moderno -->
+    <p class="text-lg md:text-xl text-dark-purple-300/80 font-light leading-relaxed">
+      <span class="font-medium text-dark-purple-100">Bienvenido</span> a tu espacio central para organizar, seguir y <br class="hidden sm:block" />
+      hacer crecer tus cursos con claridad y enfoque.
+    </p>
+
+    <!-- Toque final: badge con enlace de acceso -->
+     <a href="{%url 'cursos'%}">
+      <div class="mt-8 inline-flex items-center gap-2 bg-dark-purple-800/50 px-5 py-2 rounded-full border border-dark-purple-700 text-sm text-dark-purple-300 font-medium shadow-sm hover:bg-dark-purple-800 hover:text-white transition-colors duration-150">
+        <i class="fa-regular fa-compass text-dark-purple-500"></i>
+        <span>Empieza ahora</span>
+        <i class="fa-regular fa-arrow-right text-dark-purple-500 text-xs"></i>
+      </div>
+    </a>
+    <!-- Nota: solo bienvenida, sin más contenido -->
+    <div class="mt-6 text-xs text-dark-purple-300/50 font-mono tracking-wider uppercase">
+      · gestión ágil · visión clara ·
+    </div>
+  </div>
+
+</body>
+</html>

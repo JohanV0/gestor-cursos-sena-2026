@@ -1,0 +1,172 @@
+{% extends 'layouts/base.html' %}
+
+{%block title%}
+Acerca de Nosotros
+{%endblock%}
+
+{% block content %}
+<div class="w-full max-w-4xl bg-dark-purple-900/80 backdrop-blur rounded-3xl shadow-2xl shadow-black/50 p-6 md:p-10 border border-dark-purple-800">
+
+    <!-- CABECERA -->
+    <div class="flex items-start sm:items-center gap-4 mb-8 border-b border-dark-purple-800 pb-6">
+        <div class="bg-dark-purple-800/60 p-3 rounded-2xl text-dark-purple-500 border border-dark-purple-700 shrink-0">
+            <i class="fa-regular fa-id-card text-2xl"></i>
+        </div>
+        <div class="flex-1 min-w-0">
+            <span class="text-[11px] tracking-[0.2em] uppercase text-dark-purple-300/80 block mb-1.5">
+                プロフィール — About
+            </span>
+            <h1 class="text-2xl md:text-3xl font-jp-serif font-light text-white tracking-wide leading-tight">
+                Acerca de
+            </h1>
+            <p class="text-sm text-dark-purple-300 font-light mt-1">
+                Quién está detrás de este proyecto
+            </p>
+        </div>
+        <a href="{%url 'cursos' %}"
+           class="shrink-0 inline-flex items-center gap-1.5 px-4 py-2.5 bg-dark-purple-950 text-dark-purple-300 text-sm font-medium rounded-xl border border-dark-purple-800 hover:bg-dark-purple-800 hover:text-white hover:border-dark-purple-700 transition-all">
+            <i class="fa-solid fa-right-from-bracket text-xs"></i>
+            <span class="hidden sm:inline">
+                Volver
+            </span>
+        </a>
+    </div>
+
+    <!-- PERFIL -->
+    <div class="detalle-card bg-dark-purple-950/60 rounded-2xl p-6 md:p-8 border border-dark-purple-800 shadow-sm flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
+        <!-- AVATAR -->
+        <div class="shrink-0">
+            <div class="avatar-ring w-24 h-24 rounded-2xl p-[2px]">
+                <div class="w-full h-full rounded-[14px] bg-dark-purple-900 flex items-center justify-center">
+                    <span class="text-3xl font-jp-serif font-medium text-dark-purple-300">
+                        JO
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="min-w-0 flex-1">
+            <h2 class="text-2xl font-jp-serif font-medium text-white break-words">
+                Johan Vergara
+            </h2>
+            <p class="text-sm text-dark-purple-300 mt-1">
+                Aprendiz SENA · Análisis y Desarrollo de Software
+            </p>
+
+            <div class="flex flex-wrap justify-center sm:justify-start gap-2 mt-4">
+                <span class="inline-flex items-center gap-1.5 text-xs font-mono bg-dark-purple-800/80 text-dark-purple-300 px-3 py-1 rounded-full border border-dark-purple-700">
+                    <i class="fa-solid fa-graduation-cap text-[11px] text-dark-purple-500"></i>
+                    SENA
+                </span>
+                <span class="inline-flex items-center gap-1.5 text-xs font-mono bg-dark-purple-800/80 text-dark-purple-300 px-3 py-1 rounded-full border border-dark-purple-700">
+                    <i class="fa-solid fa-building text-[11px] text-dark-purple-500"></i>
+                    Centro de Comercio y Servicios
+                </span>
+                <span class="inline-flex items-center gap-1.5 text-xs font-mono bg-dark-purple-800/80 text-dark-purple-300 px-3 py-1 rounded-full border border-dark-purple-700">
+                    <i class="fa-solid fa-location-dot text-[11px] text-dark-purple-500"></i>
+                    Regional Tolima
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SOBRE EL PROYECTO -->
+    <div class="mt-6 bg-dark-purple-900/60 rounded-2xl p-6 md:p-8 border border-dark-purple-800 shadow-sm">
+        <div class="flex items-start gap-4">
+            <div class="bg-dark-purple-800/60 p-2.5 rounded-xl text-dark-purple-500 border border-dark-purple-700 mt-0.5 shrink-0">
+                <i class="fa-solid fa-circle-chevron-right text-sm"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+                <p class="text-xs font-semibold text-dark-purple-300/90 uppercase tracking-wider">
+                    Sobre este proyecto
+                </p>
+                <p class="text-base text-dark-purple-100/90 leading-relaxed mt-1.5">
+                    Este gestor de proyectos y tareas fue desarrollado como parte de mi formación
+                    como aprendiz del SENA, en el marco del programa de formación del
+                    Centro de Comercio y Servicios, Regional Tolima. Es un espacio para
+                    poner en práctica lo aprendido y seguir creciendo como desarrollador.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- DATOS -->
+    <div class="mt-6 bg-dark-purple-950/60 rounded-2xl p-6 md:p-8 border border-dark-purple-800 shadow-sm">
+        <div class="flex items-center gap-2 mb-5">
+            <i class="fa-solid fa-address-card text-dark-purple-500 text-sm"></i>
+            <h2 class="text-xl font-jp-serif font-medium text-white">
+                Información
+            </h2>
+        </div>
+
+        <ul class="space-y-2.5">
+            <li class="bg-dark-purple-950/70 border border-dark-purple-800 rounded-xl px-4 py-3.5 flex items-center gap-3">
+                <div class="bg-dark-purple-800/60 p-2 rounded-lg text-dark-purple-500 border border-dark-purple-700 shrink-0">
+                    <i class="fa-solid fa-user text-sm"></i>
+                </div>
+                <div class="min-w-0">
+                    <p class="text-[11px] uppercase tracking-wider text-dark-purple-300/70">
+                        Nombre
+                    </p>
+                    <p class="text-white font-medium">
+                        Johan Vergara
+                    </p>
+                </div>
+            </li>
+            <li class="bg-dark-purple-950/70 border border-dark-purple-800 rounded-xl px-4 py-3.5 flex items-center gap-3">
+                <div class="bg-dark-purple-800/60 p-2 rounded-lg text-dark-purple-500 border border-dark-purple-700 shrink-0">
+                    <i class="fa-solid fa-graduation-cap text-sm"></i>
+                </div>
+                <div class="min-w-0">
+                    <p class="text-[11px] uppercase tracking-wider text-dark-purple-300/70">
+                        Rol
+                    </p>
+                    <p class="text-white font-medium">
+                        Aprendiz SENA
+                    </p>
+                </div>
+            </li>
+            <li class="bg-dark-purple-950/70 border border-dark-purple-800 rounded-xl px-4 py-3.5 flex items-center gap-3">
+                <div class="bg-dark-purple-800/60 p-2 rounded-lg text-dark-purple-500 border border-dark-purple-700 shrink-0">
+                    <i class="fa-solid fa-building-columns text-sm"></i>
+                </div>
+                <div class="min-w-0">
+                    <p class="text-[11px] uppercase tracking-wider text-dark-purple-300/70">
+                        Centro de formación
+                    </p>
+                    <p class="text-white font-medium">
+                        Centro de Comercio y Servicios
+                    </p>
+                </div>
+            </li>
+            <li class="bg-dark-purple-950/70 border border-dark-purple-800 rounded-xl px-4 py-3.5 flex items-center gap-3">
+                <div class="bg-dark-purple-800/60 p-2 rounded-lg text-dark-purple-500 border border-dark-purple-700 shrink-0">
+                    <i class="fa-solid fa-map-location-dot text-sm"></i>
+                </div>
+                <div class="min-w-0">
+                    <p class="text-[11px] uppercase tracking-wider text-dark-purple-300/70">
+                        Regional
+                    </p>
+                    <p class="text-white font-medium">
+                        Tolima
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- PIE -->
+    <div class="mt-6 text-xs text-dark-purple-300/60 flex justify-between items-center">
+        <span class="flex items-center gap-1.5">
+            <i class="fa-regular fa-circle-check text-dark-purple-500"></i>
+            Perfil del desarrollador
+        </span>
+        <a href="#"
+           class="flex items-center gap-1.5 hover:text-dark-purple-300 transition-colors">
+            <i class="fa-solid fa-arrow-left"></i>
+            Ir al inicio
+        </a>
+    </div>
+</div>
+{% endblock %}
+
