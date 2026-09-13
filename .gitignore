@@ -1,11 +1,2 @@
-# entorno virtual
-venv/
-
-#Base de datos local
-db.sqlite3
-
-# cache
-__pychache__/
-*py[cod]
-*pyc
-*$py.class
+# Created by venv; see https://docs.python.org/3/library/venv.html
+*
