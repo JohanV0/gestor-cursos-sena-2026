@@ -1,0 +1,11 @@
+# entorno virtual
+venv/
+
+#Base de datos local
+db.sqlite3
+
+# cache
+__pychache__/
+*py[cod]
+*pyc
+*$py.class
