@@ -1,18 +1,23 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.decorators.http import require_POST
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required 
 from . models import Cursos, Leccion
 
+@login_required
 def home(request):
     return render(request, 'home.html')
 
+@login_required
 def acerda_de(request):
     return render(request,'acerca-de.html')
 
+@login_required
 def cursos(request):
     cursos = Cursos.objects.all()
     return render(request, 'cursos.html', {'cursos': cursos})
 
+@login_required
 def nuevos_cursos(request):
     Cursos.objects.create(
     Titulo="JavaScript", 
@@ -21,10 +26,12 @@ def nuevos_cursos(request):
     )
     return HttpResponse('registro guardado')
 
+@login_required
 def ver_curso (request,id):
     curso = Cursos.objects.get(id=id)
     return render(request, 'detalle-curso.html',{'curso' : curso})
 
+@login_required
 def nuevo_curso(request):
     if request.method == 'POST':
         titulo = request.POST.get('titulo')
@@ -43,11 +50,13 @@ def nuevo_curso(request):
 
     return render(request, 'nuevos_cursos.html')
 
+@login_required
 def eliminar_curso(request,id):
     curso = Cursos.objects.get(id=id)
     curso.delete()
     return redirect('cursos')
 
+@login_required
 def editar_curso(request,id):
     curso = Cursos.objects.get(id=id)
     if request.method == 'POST':
@@ -64,6 +73,7 @@ def editar_curso(request,id):
         
     return render(request, 'editar-curso.html', {"curso":curso})
 
+@login_required
 def crear_leccion(request,  curso_id):
     curso = get_object_or_404(Cursos, id=curso_id)
 
